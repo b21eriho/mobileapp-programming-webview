@@ -9,7 +9,7 @@ After this the given functions for noticing when either alternative page was sel
 loadurl call to the wanted page. Lastly a webviewclient was implemented, the internal page finalized and a top-margin was added to prevent the page from sliding
 under the toolbar.
 
-Page-changing is done by this code, partially pre-declared by the task
+Page-changing is done by this code, partially pre-declared by the preset project
 ```
 if (id == R.id.action_internal_web) {
             showInternalWebPage();
