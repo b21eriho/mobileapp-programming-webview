@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -32,7 +33,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        WebViewClient myWebClient = new WebViewClient();
+
         myWebView = findViewById(R.id.my_webview);
+        myWebView.setWebViewClient(myWebClient);
         myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.loadUrl("https://student.his.se/");
 
@@ -87,13 +91,13 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_external_web) {
-            Log.d("==>","Will display external web page");
             showExternalWebPage();
+            return true;
         }
 
         if (id == R.id.action_internal_web) {
-            Log.d("==>","Will display internal web page");
             showInternalWebPage();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
