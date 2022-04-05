@@ -1,5 +1,5 @@
 
-# Rapport
+# Report
 
 To begin with, the title of the app was changed in values/string and the line for allowing internet access was added to the manifest. After this the view in content_main
 and it was given an id. The layout with and height was also changed to match-parent. Further a very basic html file was created to be used as the internal site.
